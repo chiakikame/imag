@@ -17,20 +17,23 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
-extern crate chrono;
-extern crate toml;
-extern crate toml_query;
-#[macro_use] extern crate log;
+pub struct HabitStoreIdIterator(StoreIdIterator);
 
-#[macro_use] extern crate libimagerror;
-extern crate libimagentryedit;
-extern crate libimagstore;
-extern crate libimagutil;
+impl Iterator for HabitStoreIdIterator {
+    type Item = StoreId;
 
-pub mod error;
-pub mod habit;
-pub mod instance;
-pub mod iter;
-pub mod result;
-pub mod store;
+    fn next(&mut self) -> Option<Self::Item> {
+        unimplemented!()
+    }
+}
+
+pub struct HabitInstanceIterator(StoreIdIterator);
+
+impl Iterator for HabitInstanceIterator {
+    type Item = StoreId;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        unimplemented!()
+    }
+}
 

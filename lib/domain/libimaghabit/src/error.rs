@@ -17,20 +17,14 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
-extern crate chrono;
-extern crate toml;
-extern crate toml_query;
-#[macro_use] extern crate log;
+generate_error_module!(
+    generate_error_types!(HabitError, HabitErrorKind,
+        StoreReadError     => "Store read error",
+        StoreWriteError    => "Store write error"
+    );
+);
 
-#[macro_use] extern crate libimagerror;
-extern crate libimagentryedit;
-extern crate libimagstore;
-extern crate libimagutil;
-
-pub mod error;
-pub mod habit;
-pub mod instance;
-pub mod iter;
-pub mod result;
-pub mod store;
+pub use self::error::HabitError;
+pub use self::error::HabitErrorKind;
+pub use self::error::MapErrInto;
 
