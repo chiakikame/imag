@@ -35,6 +35,7 @@ members = [
     "lib/entry/libimagentryref",
     "lib/entry/libimagentrytag",
     "lib/entry/libimagentryview",
+    "lib/entry/libimaghabit",
     "lib/etc/libimaginteraction",
     "lib/etc/libimagtimeui",
     "lib/etc/libimagutil",
